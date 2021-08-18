@@ -1,8 +1,9 @@
 <?php
 function get_url($addon) {
-	$pageURL = 'http';
-	if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
-	$pageURL .= "://";
+	// $pageURL = 'http';
+	// if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+	// $pageURL .= "://";
+	$pageURL = stripos($_SERVER['SERVER_PROTOCOL'],'https') === 0 ? 'https://' : 'http://';
 	if ($_SERVER["SERVER_PORT"] != "80") {
  		$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
  	} else {
@@ -23,6 +24,6 @@ function get_url($addon) {
     <link rel="stylesheet" href="<?=get_url('css/app-output.css')?>">
 </head>
 <body>
-	<h1 class="text-purple-700"><?php echo "Hello World" ?></h1>
+	<h1 class="text-purple-700"><?php echo "Hello World : " ?><?= get_url('index.php')?></h1>
 </body>
 </html>
