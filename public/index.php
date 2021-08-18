@@ -1,17 +1,15 @@
 <?php
+// IMPORTANT
+$env_dev = 'development';
+
 function get_url($addon) {
-	if(isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on'){
-		$pageURL = 'https://';
+	if($env_dev == 'production'){
+		$base_url = 'https://mathedu-ariga.herokuapp.com/';
 	}else{
-		$pageURL = 'http://';
+		$base_url = 'http://localhost/MathEdu/public/';
 	}
-	if ($_SERVER["SERVER_PORT"] != "80") {
- 		$pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
- 	} else {
-  	$pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
-	}
-	$pageURL .= $addon;
-	return $pageURL;
+	$base_url .= $addon;
+	return $base_url;
 }
 ?>
 <!DOCTYPE html>
