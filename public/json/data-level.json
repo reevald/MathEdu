@@ -1,0 +1,68 @@
+{
+  "level":[
+    {
+      "qna":[
+        {
+          "quest":"Aku tidak mempunyai sisi berbentuk garis lurus",
+          "ans":"circle"
+        },
+        {
+          "quest":"Aku mempunyai sudut siku-siku, jumlah sisi ada 4 dan semuanya sama panjang.",
+          "ans":"square"
+        },
+        {
+          "quest":"Gambarlah bangun jajargenjang!",
+          "ans":"parallelogram"
+        },
+        {
+          "quest":"Aku adalah bangun yang mempunyai 3 sisi.",
+          "ans":"triangle"
+        },
+        {
+          "quest":"Gambarlah bangun trapesium sama kaki.",
+          "ans":"trapezoid"
+        },
+        {
+          "quest":"Gambarlah bangun layang-layang.",
+          "ans":"kite"
+        }
+      ]
+    },
+    {
+      "qna":[
+        {
+          "quest":"Besar keliling aku sama dengan empat kali sisiku.",
+          "ans":"square"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara keliling lingkaran berjari-jari 10 cm atau persegi dengan sisi 10 cm?",
+          "ans":"square"
+        },
+        {
+          "quest":"Aku mirip matahari",
+          "ans":"circle"
+        }
+      ]
+    },
+    {
+      "qna":[
+        {
+          "quest":"Besar luasku sama dengan setengah dari perkalian diagonal-diagonalku.",
+          "ans":"kite"
+        },
+        {
+          "quest":"Huruf depanku adalah huruf J",
+          "ans":"parallelogram"
+        },
+        {
+          "quest":"Huruf terakhirku adalah huruf M",
+          "ans":"trapezoid"
+        },
+        {
+          "quest":"Bentuk mirip gunung yang dilihat dari jauh.",
+          "ans":"triangle"
+        }
+      ]
+    }
+  ]
+}
