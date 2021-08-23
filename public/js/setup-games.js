@@ -38,11 +38,11 @@ function get_url(addon){
 }
 
 async function preload(){
-  let box_loader = document.getElementById('boxLoader');
-  box_loader.style.display = 'flex';
+  // let box_loader = document.getElementById('boxLoader');
+  // box_loader.style.display = 'flex';
   model = await tf.loadLayersModel(get_url('model/tfjs-quant-model/quant-model.json'));
-  let box_loader = document.getElementById('boxLoader');
-  box_loader.style.display = 'none';
+  // let box_loader = document.getElementById('boxLoader');
+  // box_loader.style.display = 'none';
 }
 
 function setup(){

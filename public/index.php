@@ -55,9 +55,9 @@ function get_url($addon) {
 </head>
 <body class="flex justify-center">
   <!-- Loader -->
-  <div id="boxLoader" class="flex flex-row items-center justify-center absolute top-0 h-full w-full z-20 bg-green-400">
+  <!-- <div id="boxLoader" class="flex flex-row items-center justify-center absolute top-0 h-full w-full z-20 bg-green-400">
     <div>Loading...</div>
-  </div>
+  </div> -->
 
   <!-- Menu -->
   <div id="boxStart" class="flex flex-row items-center justify-center absolute top-0 h-full w-full z-20 bg-indigo-400">
