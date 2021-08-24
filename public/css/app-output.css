@@ -573,6 +573,10 @@ video {
   z-index: 20;
 }
 
+.z-30 {
+  z-index: 30;
+}
+
 .mr-1 {
   margin-right: 0.25rem;
 }

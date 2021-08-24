@@ -26,23 +26,11 @@ var list_data_line_tool = [];
 var data_qna, ans_user, ans_qna, quest_qna, num_level, num_qna, length_qna_level;
 var show_quest_status, show_star_level_status, show_notice_result_status, result_qna_status;
 
-function get_url(addon){
-  let production = true;
-  let base_url;
-  if(production){
-    base_url = 'https://mathedu-ariga.herokuapp.com/';
-  }else{
-    base_url = 'http://localhost/MathEdu/public/';
-  }
-  return base_url + addon;
-}
-
 async function preload(){
-  // let box_loader = document.getElementById('boxLoader');
-  // box_loader.style.display = 'flex';
+  let box_loader = document.getElementById('boxLoader');
+  box_loader.style.display = 'flex';
   model = await tf.loadLayersModel(get_url('model/tfjs-quant-model/quant-model.json'));
-  // let box_loader = document.getElementById('boxLoader');
-  // box_loader.style.display = 'none';
+  box_loader.style.display = 'none';
 }
 
 function setup(){

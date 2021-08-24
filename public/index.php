@@ -1,6 +1,6 @@
 <?php
 function get_url($addon) {
-  $production = true;
+  $production = True;
   if($production){
     $base_url = 'https://mathedu-ariga.herokuapp.com/';
   }else{
@@ -25,7 +25,6 @@ function get_url($addon) {
   <!-- Core Libraries -->
   <!-- <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script> -->
   <!-- <script src="<?=get_url('js/init-alpine.js')?>"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.6.0/dist/tf.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
     html * {
@@ -48,16 +47,28 @@ function get_url($addon) {
       border-bottom-color: #1E40AF;
     }
   </style>
-
+  <script type="text/javascript">
+    function get_url(addon){
+      let production = true;
+      let base_url;
+      if(production){
+        base_url = 'https://mathedu-ariga.herokuapp.com/';
+      }else{
+        base_url = 'http://localhost/MathEdu/public/';
+      }
+      return base_url + addon;
+    }
+  </script>
   <script src="<?=get_url('js/p5.min.js')?>"></script>
   <script src="<?=get_url('js/p5.dom.min.js')?>"></script>
   <script src="<?=get_url('js/setup-games.js')?>"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.6.0/dist/tf.min.js"></script>
 </head>
 <body class="flex justify-center">
   <!-- Loader -->
-  <!-- <div id="boxLoader" class="flex flex-row items-center justify-center absolute top-0 h-full w-full z-20 bg-green-400">
+  <div id="boxLoader" class="flex flex-row items-center justify-center absolute top-0 h-full w-full z-30 bg-green-400">
     <div>Loading...</div>
-  </div> -->
+  </div>
 
   <!-- Menu -->
   <div id="boxStart" class="flex flex-row items-center justify-center absolute top-0 h-full w-full z-20 bg-indigo-400">
