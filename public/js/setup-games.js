@@ -3,9 +3,14 @@ var cnv, sub_cnv, length_box, x_box, y_box;
 var img_logo_box, img_star_point, data_img;
 var x1, x2, y1, y2;
 var crop_status = false;
+var frame_rate = 24;
+var change_frame_rate_status = false;
 
 // model with tensorflow (json)
 var model;
+// handle first load
+var first_detect = true;
+var show_load_first_status = false;
 
 // parameter draw tools
 var color_pen = 'black';
@@ -15,7 +20,7 @@ var click2;
 var touch_status = false;
 var finish_status = false;
 var currX, currY;
-var pen_size = 10;
+var pen_size = 12;
 var pen_state = -1; // -1 = none, 0 = pencil, 1 = line
 var curr_pen_state;
 var start_pen = false;
@@ -34,7 +39,7 @@ async function preload(){
 }
 
 function setup(){
-  frameRate(42);
+  frameRate(frame_rate);
   textFont('Fredoka One');
   cnv = createCanvas(window.innerWidth, window.innerHeight);
   cnv.position(0, 0);
@@ -46,6 +51,9 @@ function setup(){
 
 function draw(){
   // Fix (bug?) stroke weight line on touch (mobile)
+  if(change_frame_rate_status == true){
+    frameRate(frame_rate);
+  }
   if(touch_status == true){
     strokeWeight(pen_size * 2);
   }else{
@@ -79,7 +87,13 @@ function draw(){
     // displays all previously created lines
     if(list_data_line_tool.length > 0){
       list_data_line_tool.forEach(
-        coord => line(coord[0], coord[1], coord[2], coord[3])
+        coord => {
+          push();
+          strokeWeight(coord[4]);
+          stroke(coord[5]);
+          line(coord[0], coord[1], coord[2], coord[3]);
+          pop();
+        }
       );
     }
 
@@ -116,7 +130,25 @@ function draw(){
     if(finish_status == true){
       showFinish();
     }
+    if(show_load_first_status == true){
+      showLoadFirst();
+    }
   }
+}
+
+function showLoadFirst(){
+  push();
+  textSize(20);
+  stroke('white');
+  strokeWeight(3);
+  fill(0);
+  textAlign(CENTER);
+  text(
+    "Loading Deteksi...",
+    window.innerWidth / 2,
+    window.innerHeight / 2
+  );
+  pop();
 }
 
 function showStarLevel(level, score){
@@ -178,7 +210,12 @@ function lineTool(){
   
   // save line to show next frame
   if(click2 != undefined && click2 == true){
-    list_data_line_tool.push([x1, y1, x2, y2]);
+    let size_line = pen_size;
+    let color_line = color_pen;
+    if(touch_status == true){
+      size_line = pen_size * 2;
+    }
+    list_data_line_tool.push([x1, y1, x2, y2, size_line, color_line]);
     click2 = false;
     click1 = false;
   }
@@ -318,6 +355,12 @@ function mousePressed(event){
 // =========== Classification handler ===========
 
 async function process(){
+  if(first_detect == true){
+    show_load_first_status = true;
+    first_detect = false;
+  }
+  draw();
+
   // Reference : 
   // https://js.tensorflow.org/api/3.6.0/#browser.fromPixels
   // https://developer.mozilla.org/en-US/docs/Web/API/ImageData
@@ -377,7 +420,29 @@ async function detectCall(clmpArray) {
     result_qna_status = false;
   }
 
+  switch(userAns){
+    case 'circle':
+      userAns = 'Lingkaran';
+      break;
+    case 'kite':
+      userAns = 'Layang-Layang';
+      break;
+    case 'parallelogram':
+      userAns = 'Jajargenjang';
+      break;
+    case 'square':
+      userAns = 'Persegi';
+      break;
+    case 'trapezoid':
+      userAns = 'Trapesium';
+      break;
+    case 'triangle':
+      userAns = 'Segitiga';
+      break;
+  }
+
   show_notice_result_status = true;
+  show_load_first_status = false;
   repeatOrSetup(result_qna_status);
 }
 
@@ -398,15 +463,16 @@ function showFinish(){
   stroke('white');
   strokeWeight(3);
   fill(0);
+  textAlign(CENTER);
   text(
-    "Finish!",
-    window.innerWidth / 2 - 40,
+    "Tantangan Selesai!",
+    window.innerWidth / 2,
     window.innerHeight / 2
   );
   text(
     "Ulangi lagi?",
-    window.innerWidth / 2 - 70,
-    window.innerHeight / 2 + 20
+    window.innerWidth / 2,
+    window.innerHeight / 2 + 30
   );
   pop();
 }
@@ -418,15 +484,16 @@ function showNoticeResult(result, userAns){
     stroke('white');
     strokeWeight(3);
     fill(0);
+    textAlign(CENTER);
     text(
-      "Good Job!",
-      window.innerWidth / 2 - 40,
+      "Kerja Bagus!",
+      window.innerWidth / 2,
       window.innerHeight / 2
     );
     text(
       "Jawabanmu : "+userAns,
-      window.innerWidth / 2 - 70,
-      window.innerHeight / 2 + 20
+      window.innerWidth / 2,
+      window.innerHeight / 2 + 30
     );
     pop();
   }else{
@@ -435,15 +502,16 @@ function showNoticeResult(result, userAns){
     stroke('white');
     strokeWeight(3);
     fill(0);
+    textAlign(CENTER);
     text(
-      "Wrong Answer!",
-      window.innerWidth / 2 - 70,
+      "Belum Tepat!",
+      window.innerWidth / 2,
       window.innerHeight / 2
     );
     text(
       "Jawabanmu : "+userAns,
-      window.innerWidth / 2 - 70,
-      window.innerHeight / 2 + 20
+      window.innerWidth / 2,
+      window.innerHeight / 2 + 30
     );
     pop();
   }
@@ -582,4 +650,86 @@ function restartHandler(){
   done_btn.style.display = "flex";
   repeat_btn.style.display = "none";
   next_btn.style.display = "none";
+}
+
+// ============== Menu Handler ==============
+function showHelp(){
+  document.getElementById('settingPanel').style.display = "none";
+  document.getElementById('helpPanel').style.display = "flex";
+}
+
+function closeHelp(){
+  document.getElementById('helpPanel').style.display = "none";
+  document.getElementById('settingPanel').style.display = "none";
+}
+
+function showSetting(){
+  document.getElementById('settingPanel').style.display = "flex";
+  document.getElementById('helpPanel').style.display = "none";
+}
+
+function closeSetting(){
+  document.getElementById('settingPanel').style.display = "none";
+  document.getElementById('helpPanel').style.display = "none";
+}
+
+function showFullScreen(){
+  document.getElementById('offFullScreen').style.display = "none";
+  document.getElementById('onFullScreen').style.display = "flex";
+  let elem = document.body;
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen(); // W3C spec
+  } else if (elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen(); // Firefox
+  } else if (elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen(); // Safari
+  } else if (elem.msRequestFullscreen) {
+    elem.msRequestFullscreen(); // IE/Edge
+  }
+}
+
+function closeFullScreen(){
+  document.getElementById('offFullScreen').style.display = "flex";
+  document.getElementById('onFullScreen').style.display = "none";
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  }
+}
+
+function show60FPS(){
+  document.getElementById('off60FPS').style.display = "none";
+  document.getElementById('on60FPS').style.display = "flex";
+  frame_rate = 60;
+  change_frame_rate_status = true;
+  draw();
+  change_frame_rate_status = false;
+}
+
+function close60FPS(){
+  document.getElementById('off60FPS').style.display = "flex";
+  document.getElementById('on60FPS').style.display = "none";
+  frame_rate = 24;
+  change_frame_rate_status = true;
+  draw();
+  change_frame_rate_status = false;
+}
+
+function setPenSize(code){
+  if(code == 'small'){
+    pen_size = 7;
+  }
+  if(code == 'medium'){
+    pen_size = 12;
+  }
+  if(code == 'large'){
+    pen_size = 17;
+  }
+}
+
+function setPenColor(code){
+  color_pen = code;
 }
