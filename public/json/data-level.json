@@ -3,7 +3,23 @@
     {
       "qna":[
         {
-          "quest":"Aku tidak mempunyai sisi berbentuk garis lurus",
+          "quest":"Aku adalah bangun yang mempunyai 3 sisi.",
+          "ans":"triangle"
+        },
+        {
+          "quest":"Aku adalah bangun datar 4 sisi yang mana sisi yang saling berhadapannya sama panjang dan sejajar",
+          "ans":"parallelogram"
+        },
+        {
+          "quest":"Aku adalah bangun datar 4 sisi yang memiliki sepasang sisi saling sejajar",
+          "ans":"trapezoida"
+        },
+        {
+          "quest":"Aku adalah bangun datar 4 sisi yang mana pasangan sisi yang membentuk sudut memiliki panjang yang sama besar.",
+          "ans":"kite"
+        },
+        {
+          "quest":"Aku tidak mempunyai sisi berbentuk garis lurus.",
           "ans":"circle"
         },
         {
@@ -11,20 +27,40 @@
           "ans":"square"
         },
         {
-          "quest":"Gambarlah bangun jajargenjang!",
-          "ans":"parallelogram"
-        },
-        {
-          "quest":"Aku adalah bangun yang mempunyai 3 sisi.",
+          "quest":"Aku adalah bangun datar yang jumlah sudutnya sebesar 180 derajat.",
           "ans":"triangle"
         },
         {
-          "quest":"Gambarlah bangun trapesium sama kaki.",
-          "ans":"trapezoid"
+          "quest":"Jumlah sumbu simetri lipatku tak berhingga banyaknya.",
+          "ans":"circle"
         },
         {
-          "quest":"Gambarlah bangun layang-layang.",
+          "quest":"Aku adalah bangun datar 4 sisi yang tidak memiliki sumbu simetri lipat",
+          "ans":"parallelogram"
+        },
+        {
+          "quest":"Aku memiliki 4 sumbu simetri lipat.",
+          "ans":"square"
+        },
+        {
+          "quest":"Aku adalah bangun datar 4 sisi yang hanya memiliki 1 sumbu simetri lipat",
+          "ans":"trapezoida"
+        },
+        {
+          "quest":"Aku adalah gabungan dari segiempat dan segitiga siku-siku",
+          "ans":"trapezoida"
+        },
+        {
+          "quest":"Aku adalah gabungan dari 2 segitiga sama kaki",
           "ans":"kite"
+        },
+        {
+          "quest":"Aku adalah bangun datar yang mana jarak antara titik pusat ke sisi-sisiku selalu sama panjang.",
+          "ans":"circle"
+        },
+        {
+          "quest":"Jika aku diputar-putar, maka bentukku akan selalu sama seperti semula.",
+          "ans":"circle"
         }
       ]
     },
@@ -35,12 +71,40 @@
           "ans":"square"
         },
         {
-          "quest":"Manakah yang lebih besar antara keliling lingkaran berjari-jari 10 cm atau persegi dengan sisi 10 cm?",
-          "ans":"square"
+          "quest":"Kelilingku adalah 3 kali sisiku",
+          "ans":"triangle"
         },
         {
-          "quest":"Aku mirip matahari",
+          "quest":"Kelilingku adalah phi dikali dengan panjang diameterku",
           "ans":"circle"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara keliling lingkaran berjari-jari 10 cm atau persegi dengan sisi 10 cm?",
+          "ans":"triangle"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara keliling lingkaran berjari-jari 10 cm atau segitiga dengan sisi 10 cm?",
+          "ans":"circle"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara jajargenjang, segitiga, dan persegi jika panjang sisinya sama?",
+          "ans":"circle"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara persegi dengan segitiga jika panjang sisi segitiga 2 kalinya panjang sisi persegi",
+          "ans":"triangle"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara lingkaran dengan segitiga jika panjang sisi segitiga sama dengan panjang diameter lingkaran",
+          "ans":"circle"
+        },
+        {
+          "quest":"Jika tali dengan panjang 1 meter dibentuk menjadi layang-layang dan trapesium dengan ketentuan tidak boleh ada sisi yang panjangnya kurang dari 20 cm, maka bangun datar mana yang memiliki sisi paling panjang?",
+          "ans":"circle"
+        },
+        {
+          "quest":"Budi diminta menggambarkan lingkaran dan segitiga di dalam sebuah persegi. Ukurannya bebas asalkan bangun tersebut tidak memotong sisi persegi. Diketahui bahwa lingkaran dan persegi yang Budi gambar adalah keliling maksimal dari masing-masing bangun datar. Bangun datar mana yang memiliki keliling paling besar?",
+          "ans":"triangle"
         }
       ]
     },
@@ -51,16 +115,40 @@
           "ans":"kite"
         },
         {
-          "quest":"Huruf depanku adalah huruf J",
+          "quest":"Besar luasku adalah setengah dari perkalian antara alas dengan tinggi.",
+          "ans":"triangle"
+        },
+        {
+          "quest":"Besar luasku adalah 2 kalinya luas segitiga",
           "ans":"parallelogram"
         },
         {
-          "quest":"Huruf terakhirku adalah huruf M",
-          "ans":"trapezoid"
+          "quest":"Untuk mencari luasku, kamu membutuhkan nilai phi.",
+          "ans":"circle"
         },
         {
-          "quest":"Bentuk mirip gunung yang dilihat dari jauh.",
+          "quest":"Besar luasku bisa dicari dengan menggabungkan rumus segitiga dan persegi panjang",
+          "ans":"trapezoida"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara luas persegi dengan luas segitiga jika diketahui sisi persegi sama dengan alas dan tinggi segitiga?",
           "ans":"triangle"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara luas persegi dengan luas lingkaran jika diketahui sisi persegi sama dengan jari-jari lingkaran?",
+          "ans":"circle"
+        },
+        {
+          "quest":"Manakah yang lebih besar antara luas jajar genjang dengan luas layang-layang jika diketahui alas dan tinggi jajar genjang berturut-turut sama dengan diagonal satu dan dua layang-layang?",
+          "ans":"parallelogram"
+        },
+        {
+          "quest":"Budi diminta menggambarkan lingkaran dan segitiga di dalam sebuah persegi. Ukurannya bebas asalkan bangun tersebut tidak memotong sisi persegi. Diketahui bahwa lingkaran dan persegi yang Budi gambar adalah luas maksimal dari masing-masing bangun datar. Bangun datar mana yang memiliki luas paling besar?",
+          "ans":"triangle"
+        },
+        {
+          "quest":"Sebuah tali yang membentuk persegi dengan luas sebesar 100 cm per segi hendak diubah menjadi bangun datar yang menghasilkan keliling paling besar. Di antara lingkaran, segitiga sama sisi, dan jajar genjang, bangun datar mana yang cocok untuk dipilih?",
+          "ans":"parallelogram"
         }
       ]
     }
