@@ -97,7 +97,7 @@ function get_url($addon) {
   </script>
   <script src="<?=get_url('js/p5.min.js')?>"></script>
   <script src="<?=get_url('js/p5.dom.min.js')?>"></script>
-  <script src="<?=get_url('js/setup-games.js')?>"></script>
+  <script src="<?=get_url('js/setup-games.js?v=0.1')?>"></script>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.6.0/dist/tf.min.js"></script>
 </head>
 <body class="flex justify-center">
