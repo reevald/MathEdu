@@ -34,7 +34,7 @@ var show_quest_status, show_star_level_status, show_notice_result_status, result
 async function preload(){
   let box_loader = document.getElementById('boxLoader');
   box_loader.style.display = 'flex';
-  model = await tf.loadLayersModel(get_url('model/tfjs-quant-model/quant-model.json'));
+  model = await tf.loadLayersModel(get_url('model/tfjs-quant-model-v2/quant-model-v2.json'));
   box_loader.style.display = 'none';
 }
 
