@@ -29,6 +29,10 @@ function get_url($addon) {
     html * {
       font-family: 'Fredoka One', cursive !important;
     }
+    
+    body {
+      overscroll-behavior: contain;
+    }
 
     .button-footer{
       border-radius: 15px;
