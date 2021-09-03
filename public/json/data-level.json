@@ -7,7 +7,7 @@
           "ans":"triangle"
         },
         {
-          "quest":"Aku adalah bangun datar 4 sisi yang mana sisi yang saling berhadapannya sama panjang dan sejajar",
+          "quest":"Aku adalah bangun datar 4 sisi, yang mana sisi yang saling berhadapan sama panjang dan sejajar. Namun aku tidak memiliki sudut yang besarnya 90 derajat.",
           "ans":"parallelogram"
         },
         {
@@ -15,7 +15,7 @@
           "ans":"trapezoid"
         },
         {
-          "quest":"Aku adalah bangun datar 4 sisi yang memiliki dua pasang sisi yang sama panjang dan tidak sejajar.",
+          "quest":"Aku adalah bangun datar 4 sisi yang memiliki dua pasang sisi sama panjang yang tidak sejajar.",
           "ans":"kite"
         },
         {
@@ -23,7 +23,7 @@
           "ans":"circle"
         },
         {
-          "quest":"Aku mempunyai sudut siku-siku, jumlah sisi ada 4 dan semuanya sama panjang.",
+          "quest":"Aku mempunyai sudut siku-siku, jumlah sisi ada 4, dan semuanya sama panjang.",
           "ans":"square"
         },
         {
@@ -87,24 +87,24 @@
           "ans":"circle"
         },
         {
-          "quest":"Manakah yang lebih besar antara segitiga atau persegi jika panjang sisi-sisinya sama?",
+          "quest":"Manakah yang kelilingnya paling besar antara segitiga dengan persegi jika panjang sisi-sisinya sama?",
           "ans":"square"
         },
         {
-          "quest":"Manakah yang lebih besar antara persegi atau segitiga jika panjang sisi segitiga sama sisi 2 kalinya panjang sisi persegi",
+          "quest":"Manakah yang kelilingnya paling besar antara persegi dengan segitiga jika panjang sisi segitiga sama sisi 2 kalinya panjang sisi persegi",
           "ans":"triangle"
         },
         {
-          "quest":"Manakah yang lebih besar antara lingkaran atau segitiga jika panjang sisi segitiga sama sisi sama dengan panjang diameter lingkaran",
+          "quest":"Manakah yang kelilingnya paling besar antara lingkaran dengan segitiga sama sisi jika panjang sisi segitiga sama dengan panjang diameter lingkaran?",
+          "ans":"circle"
+        },
+        {
+          "quest":"Manakah yang memiliki keliling paling besar antara segitiga dengan sisi 7 cm dan persegi dengan sisi 5 cm?",
           "ans":"triangle"
         },
         {
-          "quest":"Jika tali dengan panjang 1 meter dibentuk menjadi layang-layang dan trapesium dengan ketentuan tidak boleh ada sisi yang panjangnya kurang dari 20 cm, maka bangun datar mana yang memiliki sisi paling panjang?",
-          "ans":"kite"
-        },
-        {
-          "quest":"Budi diminta menggambarkan lingkaran dan segitiga di dalam sebuah persegi. Ukurannya bebas asalkan bangun tersebut tidak memotong sisi persegi. Diketahui bahwa lingkaran dan persegi yang Budi gambar adalah keliling maksimal dari masing-masing bangun datar. Bangun datar mana yang memiliki keliling paling besar?",
-          "ans":"triangle"
+          "quest":"Manakah yang memiliki keliling paling besar antara persegi dengan sisi 10 cm dan lingkaran dengan jari-jari 7 cm?",
+          "ans":"circle"
         }
       ]
     },
@@ -132,7 +132,7 @@
         },
         {
           "quest":"Manakah yang lebih besar antara luas persegi atau luas segitiga jika diketahui alas dan tinggi segitiga sama dengan panjang sisi persegi?",
-          "ans":"triangle"
+          "ans":"square"
         },
         {
           "quest":"Manakah yang lebih besar antara luas persegi atau luas lingkaran jika diketahui sisi persegi sama dengan jari-jari lingkaran?",
@@ -143,12 +143,12 @@
           "ans":"parallelogram"
         },
         {
-          "quest":"Budi diminta menggambarkan lingkaran dan segitiga di dalam sebuah persegi. Ukurannya bebas asalkan bangun tersebut tidak memotong sisi persegi. Diketahui bahwa lingkaran dan persegi yang Budi gambar adalah luas maksimal dari masing-masing bangun datar. Bangun datar mana yang memiliki luas paling besar?",
-          "ans":"triangle"
+          "quest":"Budi dan Siti masing-masing memiliki seutas tali dengan panjang 44 cm. Dengan tali tersebut, Budi ingin membentuknya menjadi bangun persegi dan Siti inngin membentuknya menjadi lingkaran. Dari kedua bangun datar tersebut, mana yang memiliki luas paling besar?",
+          "ans":"circle"
         },
         {
-          "quest":"Sebuah tali yang membentuk persegi dengan luas sebesar 100 satuan luas, hendak diubah menjadi bangun datar yang menghasilkan keliling paling besar. Di antara lingkaran, segitiga sama sisi, dan jajar genjang, bangun datar mana yang cocok untuk dipilih?",
-          "ans":"parallelogram"
+          "quest":"Budi memiliki tali dengan bentuk persegi, sedangkan Andi memiliki tali dengan bentuk lingkaran. Kedua bangun datar tesebut memiliki luas yang sama, yaitu 154 cm^2. Jika tali tersebut dibentangkan, tali dengan bentuk bangun datar apa yang paling panjang?",
+          "ans":"square"
         }
       ]
     }
