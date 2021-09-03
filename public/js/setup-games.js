@@ -44,7 +44,7 @@ function setup(){
   cnv = createCanvas(window.innerWidth, window.innerHeight);
   cnv.position(0, 0);
   sub_cnv = createGraphics(window.innerWidth, window.innerHeight);
-  data_qna = loadJSON('json/data-level.json');
+  data_qna = loadJSON(get_url('json/data-level.json?v=0.2'));
   img_logo_box = loadImage(get_url('img/logo-box-200x200.svg'));
   img_star_point = loadImage("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='60' height='60'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M12 .5l4.226 6.183 7.187 2.109-4.575 5.93.215 7.486L12 19.69l-7.053 2.518.215-7.486-4.575-5.93 7.187-2.109L12 .5zM10 12H8a4 4 0 0 0 7.995.2L16 12h-2a2 2 0 0 1-3.995.15L10 12z' fill='rgba(230,126,34,1)'/%3E%3C/svg%3E");
 }
