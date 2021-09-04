@@ -341,12 +341,20 @@ function get_url($addon) {
             tabindex="-1" x-transition:leave="transition ease-in duration-150"
             x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
             @click.away="closeColorPen" @keydown.escape="closeColorPen">
-            <!-- Active: "bg-gray-100", Not Active: "" -->
+
             <a href="#red" onclick="setPenColor('red')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"
               tabindex="-1">
               <div class="flex flex-row justify-between items-center">
                 <div class="mr-1">Merah</div>
-                <div class="w-4 h-4 bg-red-500">
+                <div class="w-4 h-4" style="background-color: rgb(255, 0, 0);">
+                </div>
+              </div>
+            </a>
+            <a href="#orange" onclick="setPenColor('orange')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"
+              tabindex="-1">
+              <div class="flex flex-row justify-between items-center">
+                <div class="mr-1">Oren</div>
+                <div class="w-4 h-4" style="background-color: rgb(255, 160, 16);">
                 </div>
               </div>
             </a>
@@ -354,15 +362,23 @@ function get_url($addon) {
               tabindex="-1">
               <div class="flex flex-row justify-between items-center">
                 <div class="mr-1">Hijau</div>
-                <div class="w-4 h-4 bg-green-500">
+                <div class="w-4 h-4" style="background-color: rgb(0, 192, 0);">
                 </div>
               </div>
+            </a>
+            <a href="#blue" onclick="setPenColor('blue')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"
+              tabindex="-1">
+              <div class="flex flex-row justify-between items-center">
+                <div class="mr-1">Biru</div>
+                <div class="w-4 h-4" style="background-color: rgb(0, 32, 255);">
+                </div>
+              </div>    
             </a>
             <a href="#purple" onclick="setPenColor('purple')" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem"
               tabindex="-1">
               <div class="flex flex-row justify-between items-center">
                 <div class="mr-1">Ungu</div>
-                <div class="w-4 h-4 bg-purple-800">
+                <div class="w-4 h-4" style="background-color: rgb(160, 32, 255);">
                 </div>
               </div>    
             </a>
@@ -370,7 +386,7 @@ function get_url($addon) {
               tabindex="-1">
               <div class="flex flex-row justify-between items-center">
                 <div class="mr-1">Hitam</div>
-                <div class="w-4 h-4 bg-gray-900">
+                <div class="w-4 h-4" style="background-color: rgb(0, 0, 0);">
                 </div>
               </div>
             </a>
